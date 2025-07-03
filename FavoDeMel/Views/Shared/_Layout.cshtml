@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Favo de Mel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FavoDeMel.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .hover-btn:hover {
+            transform: scale(1.09);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+  <header>
+  <!-- CARROSSEL SUPERIOR -->
+  <div id="carouselExampleInterval" class="carousel slide primary-color text-center d-flex align-items-center justify-content-center cursor-pointer" data-bs-ride="carousel" style="cursor: pointer;">
+    <div class="carousel-inner w-100">
+      <div class="carousel-item active" data-bs-interval="3300">
+        <a href="https://www.instagram.com/_.favodemel_/" target="_blank" class="text-decoration-none">
+          <p class="m-2 strong-text secondary-text cursor-pointer">VISITE NOSSO INSTAGRAM</p>
+        </a>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3300">
+        <a href="https://api.whatsapp.com/send?phone=5591985406986&text=Ol%C3%A1!%20Tive%20interesse%20em%20seus%20servi%C3%A7os." target="_blank" class="text-decoration-none">
+          <p class="m-2 strong-text secondary-text">FALE CONOSCO NO WHATSAPP</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER TOPO RESPONSIVO -->
+  <nav class="navbar navbar-expand-md secondary-color px-3">
+    <div class="container-fluid py-2">
+
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/imagens/logoFavo.png" alt="logo" class="img-fluid" style="max-height: 60px;">
+      </a>
+
+      <!-- Botão hamburguer (collapse) -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="primary-text material-icons">dehaze</span>
+      </button>
+
+      <!-- Itens colapsáveis -->
+      <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+
+        <!-- Barra de busca central -->
+        <form class="mx-auto my-2 my-md-0" style="max-width: 500px; width: 100%;">
+          <div class="input-group">
+            <input type="text" class="form-control search-input bg-light border-0" placeholder="O que você está buscando?">
+            <span class="input-group-text bg-light border-0">
+              <span class="material-icons">search</span>
+            </span>
+          </div>
+        </form>
+
+        <!-- Menu de navegação -->
+        <ul class="navbar-nav mx-auto text-center gap-3 mt-3 mt-md-0">
+          <li class="nav-item">
+            <a class="nav-link fw-bold primary-text" href="#">INÍCIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold primary-text" href="#">PRODUTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold primary-text" href="#">CONTATO</a>
+          </li>
+          <!-- Entrar (visível apenas em telas menores) -->
+          <li class="nav-item d-md-none">
+            <a class="nav-link fw-bold primary-text" href="#">ENTRAR</a>
+          </li>
+        </ul>
+
+        <!-- Botão Entrar (visível apenas em telas médias ou maiores) -->
+        <div class="d-none d-md-flex justify-content-center mt-md-0">
+          <div class="border border-warning rounded-pill px-3 py-2 d-flex align-items-center hover-btn" style="cursor: pointer;">
+            <span class="primary-text fw-bold">Entrar</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - FavoDeMel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+    
