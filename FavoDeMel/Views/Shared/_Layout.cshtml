@@ -9,13 +9,109 @@
     <link rel="stylesheet" href="~/FavoDeMel.styles.css" asp-append-version="true" />
     <link rel="icon" type="image/x-icon" href="~/favicon.ico"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
 
-    <style>
-        .hover-btn:hover {
-            transform: scale(1.09);
-            transition: all 0.3s ease-in-out;
-        }
-    </style>
+
+<style>
+   .hover-btn:hover {
+       transform: scale(1.09);
+       transition: all 0.3s ease-in-out;
+   }
+    .footer {
+        background: #f7f1e9;
+        border-top: 3px solid #ffc107;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        padding: 1rem 0; /* altura mínima */
+    }
+   .footer-brand {
+       font-weight: bold;
+       color: #495057;
+       text-decoration: none;
+   }
+   .footer-brand:hover {
+       color: #ffc107;
+   }
+   .footer-links a {
+       color: #6c757d;
+       text-decoration: none;
+       transition: color 0.3s ease;
+   }
+   .footer-links a:hover {
+       color: #ffc107;
+   }
+   .social-links a {
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       width: 40px;
+       height: 40px;
+       background-color: #fff;
+       border-radius: 50%;
+       color: #6c757d;
+       text-decoration: none;
+       transition: all 0.3s ease;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   }
+   .social-links a:hover {
+       background-color: #ffc107;
+       color: #fff;
+       transform: translateY(-2px);
+   }
+   .honey-icon {
+       color: #ffc107;
+       margin-right: 8px;
+   }
+   .developer-social a {
+       color: #6c757d;
+       text-decoration: none;
+       font-size: 1.1rem;
+       transition: color 0.3s ease;
+   }
+   .developer-social a:hover {
+       color: #ffc107;
+   }
+   .developer-info strong {
+       color: #495057;
+   }
+   
+   /* Responsividade para celulares */
+  @@media (max-width: 994px) {
+    .footer {
+        padding: 1rem 0 !important;
+        text-align: center;
+    }
+
+    .footer .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .row > div {
+        margin-bottom: 1rem !important;
+    }
+
+    .footer .row > div:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .company-social,
+    .developer-info {
+        justify-content: center !important;
+    }
+
+    .developer-info {
+        text-align: center !important;
+    }
+}
+   
+
+</style>
 </head>
 <body>
   <header>
@@ -91,18 +187,56 @@
     </div>
   </nav>
 </header>
-
+    
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - FavoDeMel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+<footer class="footer py-3 pb-4 mt-auto">
+  <div class="container">
+    <div class="row align-items-start">
+
+      <!-- FavoDeMel + redes -->
+      <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0 text-center text-md-start align-self-start">
+        <small class="text-muted d-block">
+          &copy; 2025 FavoDeMel. Todos os direitos reservados.
+        </small>
+        <div class="social-links d-flex justify-content-center justify-content-md-start gap-2 mt-2">
+          <a href="https://www.instagram.com/_.favodemel_/" title="Instagram" aria-label="Instagram" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5591985406986&text=Ol%C3%A1!%20Tive%20interesse%20em%20seus%20servi%C3%A7os." title="WhatsApp" aria-label="WhatsApp" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
         </div>
-    </footer>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block"></div>
+
+      <div class="col-12 col-lg-4 text-center text-lg-end align-self-start">
+        <small class="text-muted d-block">
+          Desenvolvido por <strong>Matheus Rodrigues</strong>
+        </small>
+        <div class="social-links d-flex justify-content-center justify-content-lg-end gap-2 mt-2">
+          <a target="_blank" href="https://www.linkedin.com/in/matheuz-rodrigues-dev" class="text-muted" title="LinkedIn" aria-label="LinkedIn do desenvolvedor">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a target="_blank" href="https://github.com/matheuz-rodrigues" class="text-muted" title="GitHub" aria-label="GitHub do desenvolvedor">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://wa.me/5591999175479" title="WhatsApp" aria-label="WhatsApp" target="_blank" class="text-muted">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
