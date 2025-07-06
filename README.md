@@ -2,7 +2,9 @@
 
 ## Descrição
 
-FavoDeMel é um projeto desenvolvido com o objetivo de oferecer uma solução web moderna e eficiente utilizando tecnologias web atuais. Seu propósito principal, funcionalidades específicas e diferenciais ainda não estão detalhados neste repositório, mas o projeto demonstra uma estrutura robusta e escalável para aplicações web.
+FavoDeMel é um projeto solo desenvolvido com o objetivo de oferecer uma solução web moderna e eficiente, voltada para atender às necessidades de uma gráfica especializada em produtos personalizados. Embora os detalhes específicos sobre suas funcionalidades ainda estejam em desenvolvimento, o sistema já apresenta uma estrutura sólida, escalável e alinhada com as práticas atuais de desenvolvimento web.
+
+Inspirado no modelo de pequenos e-commerces, o projeto tem como foco permitir a exposição e a gestão de produtos personalizados, com funcionalidades que envolvem exibição de catálogo, imagens demonstrativas, preços e controle básico de produtos — adaptadas às demandas típicas de uma gráfica online.
 
 ## Funcionalidades
 
